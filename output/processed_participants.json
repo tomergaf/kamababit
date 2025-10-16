@@ -1,0 +1,105 @@
+[
+  {
+    "name": "Siro",
+    "amount": 0.04,
+    "actions": []
+  },
+  {
+    "name": "Shawn",
+    "amount": 0.0,
+    "actions": [
+      {
+        "from_": "Shawn",
+        "to": "Ari",
+        "amount": 266.44
+      }
+    ]
+  },
+  {
+    "name": "Nivo",
+    "amount": 0.0,
+    "actions": [
+      {
+        "from_": "Nivo",
+        "to": "Ari",
+        "amount": 136.44
+      }
+    ]
+  },
+  {
+    "name": "Ari",
+    "amount": 0.0,
+    "actions": []
+  },
+  {
+    "name": "Avivo",
+    "amount": 0.0,
+    "actions": [
+      {
+        "from_": "Avivo",
+        "to": "Ari",
+        "amount": 142.0
+      }
+    ]
+  },
+  {
+    "name": "Saar",
+    "amount": 0.0,
+    "actions": [
+      {
+        "from_": "Saar",
+        "to": "Ari",
+        "amount": 386.44
+      }
+    ]
+  },
+  {
+    "name": "Tomer",
+    "amount": 0.0,
+    "actions": [
+      {
+        "from_": "Tomer",
+        "to": "Ari",
+        "amount": 386.44
+      }
+    ]
+  },
+  {
+    "name": "Sagi",
+    "amount": 0.0,
+    "actions": [
+      {
+        "from_": "Sagi",
+        "to": "Ari",
+        "amount": 386.44
+      }
+    ]
+  },
+  {
+    "name": "Almog",
+    "amount": 0.0,
+    "actions": [
+      {
+        "from_": "Almog",
+        "to": "Ari",
+        "amount": 359.36
+      },
+      {
+        "from_": "Almog",
+        "to": "Siro",
+        "amount": 27.08
+      }
+    ]
+  },
+  {
+    "name": "Tal",
+    "amount": 0.0,
+    "actions": [
+      {
+        "from_": "Tal",
+        "to": "Siro",
+        "amount": 386.44
+      }
+    ]
+  }
+]

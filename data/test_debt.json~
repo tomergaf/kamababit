@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Siro",
+    "took": [
+      {"name": "food", "amount": 0},
+      {"name": "drinks", "amount": 0}
+    ],
+    "gave": [
+      {"name": "food", "amount": 100},
+      {"name": "drinks", "amount": 10}
+    ]
+  },
+  {
+    "name": "Ari",
+    "took": [
+      {"name": "food", "amount": 0},
+      {"name": "drinks", "amount": 0}
+    ],
+    "gave": [
+      {"name": "food", "amount": 100},
+      {"name": "drinks", "amount": 100}
+    ]
+  },
+  {
+    "name": "Tomer",
+    "gave": [
+      {"name": "food", "amount": 0}
+    ],
+    "exceptions": ["drinks"]
+  }
+]

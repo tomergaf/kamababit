@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Siro",
+    "gave": [
+      {"name": "drinks", "amount": 800}
+    ]
+  },
+  {
+    "name": "Shawn",
+    "gave": [
+      {"name": "food", "amount": 120}
+    ]
+  },
+  {
+    "name": "Nivo",
+    "gave": [
+      {"name": "food", "amount": 250}
+    ]
+  },
+  {
+    "name": "Ari",
+    "gave": [
+      {"name": "food", "amount": 250},
+      {"name": "basar", "amount": 2200}
+    ]
+  },
+  {
+    "name": "Avivo",
+    "exceptions": ["basar"]
+  },
+  { "name": "Saar" },
+  { "name": "Tomer" },
+  { "name": "Sagi" },
+  { "name": "Almog" },
+  { "name": "Tal" }
+]

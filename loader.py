@@ -1,0 +1,42 @@
+import json
+from dataclasses import dataclass, field
+from typing import Optional, Union
+from dacite import from_dict
+
+@dataclass
+class Expense:
+    name: str
+    amount: float
+
+@dataclass
+class Person:
+    name: str
+    took: list[Expense] = field(default_factory=list)
+    gave: list[Expense] = field(default_factory=list)
+    doesnt_pay: Optional[bool] = field(default_factory=list)
+    exceptions: Optional[list[str]] = field(default_factory=list)
+
+
+@dataclass
+class Loader:
+    path: str = field(default=None)
+    raw_people: list[Person] = field(default_factory=list)
+    people: list[Person] = field(default_factory=list)
+
+    # def __init__(self, debt: Union[str, dict, list]) -> None:
+    #     if isinstance(debt, str):
+    #         self.path = debt
+    #     elif isinstance(debt, (dict, list)):
+    #         self.raw_people = debt
+    #     else:
+    #         raise TypeError("Loader expects a file path (str) or JSON object (dict or list)")
+
+    def load(self) -> list[Person]:
+        if self.path is not None:
+            with open(self.path, "r", encoding="utf-8") as f:
+                raw_people = json.load(f)  # <- load directly from file
+                self.people = [from_dict(data_class=Person, data=person) for person in raw_people] # <- load using dacite=Person(**person) for person in raw_people]
+        elif self.raw_people is not None:
+            self.people = [from_dict(data_class=Person, data=person) for person in self.raw_people]
+        return self.people
+

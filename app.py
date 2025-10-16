@@ -1,0 +1,25 @@
+from dataclasses import asdict
+
+from fastapi import FastAPI
+import uvicorn
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
+from handler import handler
+
+app = FastAPI()
+
+@app.post("/kama")
+async def process(request: Request):
+    try:
+        data = await request.json()
+        output = handler(data)
+    except TypeError as e:
+        output = {"error": str(e)}
+    return JSONResponse(content=[asdict(p) for p in output])
+
+@app.get("/")
+def root():
+    return {"status": "ok"}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8080)
